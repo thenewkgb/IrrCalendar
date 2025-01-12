@@ -125,12 +125,13 @@ void printHeader(
 	printf("\n\n");
 }
 
-void printWeek(Date date)
+void printWeek(const Date date)
 {
 	// we want the beginning of the month
 	Date begin(date.year(),
 			   date.month(),
 			   1);
+			   
 	// which enum?
 	int first_day = getDayOfWeek(begin);
 	Day day = (Day)((int)first_day);
@@ -187,8 +188,6 @@ void printWeek(Date date)
 		}
 
 		begin.add_day();
-		//if (begin.day() > begin.days())
-		//	break;
 	}
 
 	Date finish(date.year(),

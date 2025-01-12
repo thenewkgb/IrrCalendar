@@ -83,7 +83,7 @@ class Date
 	int day() const { return d; };
 	Month month() const { return m; };
 	int year() const { return y; };
-	int days() { return days_in_month; };
+	int days() const { return days_in_month; };
 
 	void add_day();
 	void add_month();
